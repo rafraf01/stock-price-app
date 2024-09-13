@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const URL = "https://api.twelvedata.com/";
-const API_KEY = "f7584ca9d4814bad81498624f1e25ea5";
+const API_KEY = import.meta.env.VITE_API_KEY;
 
 export interface StockData {
   symbol: string;

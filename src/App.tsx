@@ -10,7 +10,7 @@ function App() {
       </pre>
       <div className='w-[80%] m-auto border p-5 bg-slate-50 rounded-md shadow-lg'>
         
-        <h1 className='font-urbanist text-2xl font-semibold tracking-wide inline-flex gap-2 items-center mb-5'><AiOutlineStock /> Stock price tracker</h1>
+        <h1 className='font-urbanist text-2xl font-semibold tracking-wide inline-flex gap-2 items-center mb-5'><AiOutlineStock /> Stock Market Price Tracker</h1>
         <Stocks />
       </div>
       <pre className='text-center text-gray-200 mt-5'>
