@@ -1,33 +1,40 @@
 # Stock Market Price Application
-This application is build using React.Js + Tailwind CSS.
-The application allow users to search for the current stock price in realtime.
+The application allow the users to search for the current stock price in realtime.
+This is a mobile-first application build using React.JS + Tailwind CSS + Vite.
+
 
 # Links
-API - https://twelvedata.com/docs#getting-started
-Vercel - https://stock-app-dusky-ten.vercel.app/
+API - https://twelvedata.com/docs#getting-started <br />
+Vercel - https://stock-price-app-rafaeldc.vercel.app/ <br />
 Code base - https://github.com/rafraf01/stock-price-app
 
-# Installation
+
+## Packages & Libraries
+- [TanStack Query](https://tanstack.com/query/v4/docs/framework/react/reference/useQuery)
+- [Axios API](https://axios-http.com/docs/api_intro)
+- [classnames](https://www.npmjs.com/package/classnames)
+- [react-icons](https://react-icons.github.io/react-icons/)
+
+## Installation
 To install the dependencies.
+Go to the project folder then run:
 
 ```bash
 npm install
 ```
-# Git
+## Pull branch
 ```bash
-cd stock-price-app
-git pull
+git pull origin main / git pull
 ```
 
-# Usage
+## Run project
 ```bash
-- cd stock-price-app
-- npm run dev
+npm run dev
 ```
 
 > [!TIP]
-> Sample search string are the ff:
-> 1. AAPL - returns AAPL stock price detail
-> 2. AAPL,TRP - returns `[AAPL,TRP]` details
-> 3. AAPL, 123 - returns error
-> 4. ^^^^ - returns error
+> Sample search string:
+> 1. AAPL - display AAPL stock price detail
+> 2. AAPL,TRP - display `[AAPL,TRP]` details
+> 3. AAPL, 123 - display error
+> 4. ^^^^ - display error message
