@@ -58,29 +58,29 @@ const Stocks = () => {
           return (
             <article
               key={`${index}-${p.name}`}
-              className="flex gap-8 md:gap-0 border py-2 px-5 mt-5 rounded-md items-center font-urbanist shadow-md"
+              className="flex flex-col md:flex-row gap-8 md:gap-5 lg:-gap-0 border py-2 px-5 mt-5 rounded-md items-center font-urbanist shadow-md"
             >
               <div className="flex flex-col items-start flex-1 w-full">
-                <p className="font-bold text-lg">{p.symbol}</p>
+                <p className="font-bold text-2xl md:text-lg">{p.symbol}</p>
                 <span className="text-xs text-gray-600">{p.name}</span>
               </div>
-              <div className="flex flex-col basis-1/12 items-center">
-                <p className="text-sm">{parseFloat(p.high).toFixed(2)}</p>
-                <span className="text-xs text-gray-600 flex items-center gap-0.5">
-                  <FaCaretUp />
+              <div className="flex flex-row-reverse gap-2 md:gap-0 md:flex-col basis-1/12 items-center">
+                <p className="text-xl md:text-sm">{parseFloat(p.high).toFixed(2)}</p>
+                <span className="text-xl md:text-xs text-gray-600 flex items-center gap-0.5">
+                  <FaCaretUp className="text-green-600"/>
                   high
                 </span>
               </div>
-              <div className="flex flex-col basis-1/12 items-center">
-                <p className="text-sm">{parseFloat(p.low).toFixed(2)}</p>
-                <span className="text-xs text-gray-600 flex gap-0.5 items-center">
-                  <FaCaretDown />
+              <div className="flex flex-row-reverse md:flex-col gap-2 md:gap-0  basis-1/12 items-center">
+                <p className="text-xl md:text-sm">{parseFloat(p.low).toFixed(2)}</p>
+                <span className="text-xl md:text-xs text-gray-600 flex gap-0.5 items-center">
+                  <FaCaretDown className="text-red-600"/>
                   low
                 </span>
               </div>
               <div className="flex flex-col text-center basis-1/12">
                 <p
-                  className={classNames("text-sm", {
+                  className={classNames("text-xl md:text-sm", {
                     "bg-red-500 text-white rounded-md": isNegative(
                       p.percent_change
                     ),
@@ -93,13 +93,13 @@ const Stocks = () => {
                     ? floatValue(p.percent_change)
                     : `+${floatValue(p.percent_change)}`}
                 </p>
-                <span className="text-xs text-gray-600">pct. change</span>
+                <span className="text-md md:text-xs text-gray-600">pct. change</span>
               </div>
-              <div className="flex flex-col basis-1/12 w-36 text-end">
-                <p className="font-semibold text-sm">
+              <div className="flex flex-row-reverse md:flex-col gap-2 md:gap-0 basis-1/12 w-36 justify-center items-center">
+                <p className="font-semibold text-xl md:text-sm">
                   {parseFloat(p.close).toFixed(2)}
                 </p>
-                <span className="text-xs text-gray-600">price</span>
+                <span className="text-xl md:text-xs text-gray-600">price</span>
               </div>
             </article>
           );
